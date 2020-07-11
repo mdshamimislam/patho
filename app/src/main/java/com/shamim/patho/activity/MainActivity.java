@@ -1,15 +1,18 @@
-package com.shamim.patho;
+package com.shamim.patho.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.shamim.patho.Broadcast.InternetDetector;
+import com.shamim.patho.R;
 
 public class MainActivity extends AppCompatActivity {
     TextView name, password;
@@ -36,16 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (Password.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else {
 
                     if (Name.equals("bangladesh") && Password.equals("123")) {
 
-
-
                         Intent intent = new Intent(MainActivity.this, Homepage.class);
                         startActivity(intent);
-                    }
-                    else {
+                    } else {
                         Toast.makeText(MainActivity.this, "UserName = bangladesh and password= 123", Toast.LENGTH_SHORT).show();
                     }
                 }

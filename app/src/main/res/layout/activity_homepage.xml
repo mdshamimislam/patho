@@ -4,6 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Homepage">
+    tools:context=".activity.Homepage"
+    >
 
+    <Button
+        android:id="@+id/service"
+        android:layout_width="170dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="200dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:onClick="startbutton"
+        android:text="Start Service"
+        android:textColor="#09D2EC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="173dp"
+        android:layout_height="57dp"
+        android:background="@android:color/transparent"
+        android:onClick="contact"
+        android:text="Read Contact"
+        android:textColor="#09D2EC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="205dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="88dp"
+        android:gravity="center"
+        android:hint="Contact Number"
+        android:textColor="#009688"
+        android:textColorHighlight="#10B617"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/read"
+        app:layout_constraintVertical_bias="0.167" />
 </androidx.constraintlayout.widget.ConstraintLayout>
